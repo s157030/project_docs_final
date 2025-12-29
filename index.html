@@ -23,7 +23,7 @@
   </style>
 </head>
 
-<body class="min-h-screen flex flex-col items-center justify-center text-white relative overflow-hidden">
+<body class="min-h-screen flex flex-col items-center justify-start text-white relative overflow-y-auto">
 
   <!-- Dynamic gradient background -->
   <div id="gradientBG" class="absolute inset-0 -z-10 transition-all blur-3xl scale-125"></div>
@@ -74,6 +74,20 @@
             text-sm font-semibold hover:bg-orange-400/90 hover:border-transparent
             transition-colors duration-200">
     Download PDF
+  </a>
+  <a
+    href="https://www.figma.com/proto/LpoWovnUhH3UYtFS3f8eOn/2526_PTT1_ProkhonovaV_MobielApp?node-id=130-2&t=FMqPmPOsYDl2cypd-1"
+    target="_blank"
+    rel="noopener"
+    class="inline-flex items-center justify-center
+           px-8 py-3 rounded-full
+           bg-white/10 border border-white/40
+           backdrop-blur-md shadow-lg
+           text-sm font-semibold
+           hover:bg-orange-400/90 hover:border-transparent
+           transition-colors duration-200"
+  >
+    View Figma Project
   </a>
 </div>
       <!-- Week buttons -->
@@ -203,9 +217,17 @@
     </div>
   </div>
   <!-- Footer -->
-  <footer class="w-full max-w-6xl px-6 pb-6 text-xs text-white/70 text-center mt-4">
-    © 2025 Valeriia Prokhonova — Bachelor Grafische en Digitale Media, AP Hogeschool Antwerpen
-  </footer>
+ <footer class="w-full flex justify-center py-6 text-sm text-white/60">
+  <a
+    href="https://github.com/s157030/project_docs_final"
+    target="_blank"
+    rel="noopener"
+    class="hover:text-white transition-colors duration-200"
+  >
+    View project on GitHub
+  </a>
+</footer>
+
 <script>
   let mouseGradientEnabled = true;
 </script>
