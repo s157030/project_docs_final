@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perronscherm - Lille Flandres</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple-main:#945C8F;
+  --purple-light:#B58ABF;
+  --chip-green:#2AA84F;
+  --chip-orange:#F08C2E;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--white);
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+
+.top-bar{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.5fr 3fr 1.2fr 0.6fr;
+  align-items:start;
+  gap:20px;
+  background:var(--purple-main);
+  border-radius:20px;
+  padding:16px 24px;
+  margin:20px;
+  min-height:120px;
+}
+.now-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px;
+}
+.now-time{
+  font-weight:700;
+  font-size:46px;
+}
+.now-weather{
+  font-size:22px;
+  opacity:.96;
+}
+.destination .title{
+  margin:0;
+  font-weight:700;
+  font-size:34px;
+}
+.destination .badge{
+  display:inline-block;
+  margin-top:6px;
+  background:rgba(255,255,255,.22);
+  padding:4px 10px;
+  border-radius:6px;
+  font-size:16px;
+  font-weight:600;
+}
+.dep-wrap{
+  text-align:right;
+}
+.dep-time{
+  margin:0;
+  font-weight:700;
+  font-size:36px;
+}
+.status{
+  display:inline-block;
+  margin-top:6px;
+  background:var(--white);
+  color:var(--chip-green);
+  border-radius:7px;
+  padding:3px 10px;
+  font-weight:700;
+  font-size:16px;
+}
+.perron-abs{
+  position:absolute;
+  top:50%;
+  right:24px;
+  transform:translate(10%,-50%);
+  font-weight:700;
+  font-size:100px;
+  color:var(--white);
+  line-height:1;
+}
+
+.train-diagram{
+  width:min(1150px,92%);
+  margin:18px auto 10px auto;
+}
+.train-diagram img{width:100%;height:auto;display:block;}
+
+.next-trains{
+  width:calc(100% - 40px);
+  margin:18px 20px 8px 20px;
+  background:var(--purple-light);
+  color:var(--white);
+  border-radius:16px;
+  padding:14px 20px;
+}
+.nt-title{font-weight:600;margin-bottom:6px;}
+.nt-item{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.nt-time{font-weight:700;font-size:20px;}
+.chip{
+  background:var(--white);
+  padding:3px 10px;
+  border-radius:7px;
+  font-weight:700;
+  font-size:16px;
+}
+.chip.green{color:var(--chip-green);}
+.chip.orange{color:var(--chip-orange);}
+
+.qr-row{
+  width:calc(100% - 40px);
+  margin:0 20px 26px 20px;
+  background:var(--white);
+  color:#000;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  padding:12px 0;
+}
+.qr-text{padding-left:10px;line-height:1.35;font-size:16px;}
+.qr-swatch{
+  width:100px;height:100px;border-radius:14px;
+  background:var(--purple-main);
+  justify-self:end;
+  margin-right:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="now-wrap">
+    <div class="now-time" id="current-time">--:--:--</div>
+    <div class="now-weather">
+      <span id="weather-icon">☁️</span>
+      <span id="temperature">--°C</span>
+    </div>
+  </div>
+  <div class="destination">
+    <h1 class="title" id="station-title">Lille Flandres</h1>
+    <span class="badge">IC 717 Intercity</span>
+  </div>
+  <div class="dep-wrap">
+    <h1 class="dep-time">17:36</h1>
+    <div class="status" id="status-text">op tijd</div>
+  </div>
+  <div></div>
+  <div class="perron-abs">3</div>
+</div>
+
+<div class="train-diagram">
+  <img src="public/images/train-diagram.png" alt="Treinstructuur">
+</div>
+
+<div class="next-trains">
+  <div class="nt-title" id="next-title">Volgende treinen:</div>
+  <div class="nt-item">
+    <div class="nt-time">17:36</div> Poperinge <span class="chip green" id="chip-1">op tijd</span>
+  </div>
+  <div class="nt-item">
+    <div class="nt-time">18:09</div> Hamont <span class="chip orange">+3 min</span>
+  </div>
+</div>
+
+<div class="qr-row">
+  <div class="qr-text">
+    Scan de QR-code voor actuele info<br>
+    Scannez le QR-code pour les infos<br>
+    Scannen Sie den QR-Code voor Infos
+  </div>
+  <div class="qr-swatch"></div>
+</div>
+
+<script>
+
+function updateTime(){
+  const now=new Date();
+  document.getElementById('current-time').textContent=
+    now.toLocaleTimeString('nl-BE',{hour12:false});
+}
+setInterval(updateTime,1000);
+updateTime();
+
+
+async function updateWeather(){
+  try{
+    const res=await fetch('https://api.open-meteo.com/v1/forecast?latitude=51.22&longitude=4.40&current_weather=true');
+    const data=await res.json();
+    const t=Math.round(data.current_weather.temperature);
+    const code=data.current_weather.weathercode;
+    let icon="☀️";
+    if([1,2,3].includes(code))icon="⛅";
+    else if(code>=45&&code<=67)icon="🌧️";
+    else if(code>=71)icon="❄️";
+    document.getElementById('weather-icon').textContent=icon;
+    document.getElementById('temperature').textContent=`${t>0?'+':''}${t}°C`;
+  }catch(e){
+    document.getElementById('temperature').textContent='--°C';
+  }
+}
+updateWeather();
+
+
+const langs=[
+  {station:'Lille Flandres',next:'Volgende treinen:',ontime:'op tijd'},
+  {station:'Lille Flandres',next:'Trains suivants :',ontime:'à l’heure'},
+  {station:'Lille Flandern',next:'Nächste Züge:',ontime:'pünktlich'}
+];
+let langIndex=0;
+function switchLang(){
+  const L=langs[langIndex];
+  document.getElementById('station-title').textContent=L.station;
+  document.getElementById('next-title').textContent=L.next;
+  document.getElementById('status-text').textContent=L.ontime;
+  document.getElementById('chip-1').textContent=L.ontime;
+  langIndex=(langIndex+1)%langs.length;
+}
+switchLang();
+setInterval(switchLang,15000);
+</script>
+
+</body>
+</html>

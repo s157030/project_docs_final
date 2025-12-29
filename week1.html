@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 – Low-fi prototypes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="dist/output.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start text-white relative overflow-y-auto">
+
+ <!-- Dynamic gradient background -->
+  <div id="gradientBG" class="absolute inset-0 -z-10 transition-all blur-3xl scale-125"></div>
+
+  <main class="w-full max-w-4xl px-6 py-10 lg:py-16 flex flex-col items-center text-center gap-8">
+    <div class="text-xs font-semibold tracking-[0.28em] uppercase text-white/70">
+      Valeriia Prokhonova ontwerpdocumentatie 1GDM2
+    </div>
+
+    <div class="w-full rounded-3xl bg-white/10 border border-white/30 shadow-2xl backdrop-blur-xl px-6 sm:px-8 py-8 sm:py-10 text-left">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-4">Week 1 – Low-fi prototypes</h1>
+     <div class="space-y-6 text-sm md:text-base leading-relaxed text-white/85">
+
+  <div class="space-y-7 text-sm md:text-base leading-relaxed text-white/85">
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95">
+      Onderzoek en voorbereiding
+    </h2>
+    <p>
+      Voor ik aan de eerste schetsen begon, voerde ik een korte informele bevraging uit bij vrienden en familieleden.
+      Ik vroeg hen waar zij voornamelijk op letten wanneer ze naar bestaande informatieschermen in het station kijken —
+      zowel in normale omstandigheden als wanneer ze haast hebben — en welke elementen zij als onduidelijk of storend ervaren.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Eerste ontwerpfase
+    </h2>
+    <p>
+      Op basis van deze feedback startte ik met het maken van <em class="italic">low-fi wireframes</em> voor drie types schermen:
+    </p>
+
+    <ul class="list-disc pl-5 space-y-1 mt-2">
+      <li><strong>het overzichtsscherm</strong></li>
+      <li><strong>het perronscherm</strong></li>
+      <li><strong>het wagonindelingsscherm</strong></li>
+    </ul>
+
+    <p class="mt-3">
+      Van elk scherm ontwierp ik meerdere varianten om verschillende mogelijke lay-outs en informatieniveaus te verkennen.
+      Daarnaast maakte ik ook eenvoudige <em class="italic">mobiele varianten</em>, die via een QR-code toegankelijk zouden zijn,
+      om de relatie tussen stationaire schermen en mobiele ondersteuning te onderzoeken.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Ontwerpaanpak
+    </h2>
+    <p>
+      De eerste schetsen werden uitgevoerd in <strong>zwart-wit</strong> en bevatten relatief <strong>gedetailleerde inhoud</strong>.
+      Dit was geen bewuste ontwerpkeuze, maar het gevolg van mijn beperkte ervaring met wireframes in deze vroege fase van het project.
+    </p>
+    <p>
+      Op dat moment was ik mij nog onvoldoende bewust van het feit dat wireframes voornamelijk bedoeld zijn om de
+      <strong>positionering en onderlinge verhoudingen van inhoudelijke en functionele blokken</strong> te verkennen,
+      zonder focus op visuele uitwerking of inhoudelijke precisie.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Inzicht en reflectie
+    </h2>
+    <p>
+      Tijdens het verdere verloop van het project werd duidelijk dat wireframes vooral dienen als een
+      <strong>structureel hulpmiddel</strong> om globale lay-outs, informatieroutes en functionele relaties tussen elementen te testen.
+    </p>
+    <p>
+      Dit inzicht vormde een belangrijk leerpunt en leidde tot een meer bewuste omgang met
+      <em class="italic">vereenvoudiging, abstractie en het weglaten van inhoudelijke details</em> in latere iteraties.
+    </p>
+  </div>
+
+</div>
+
+</div>
+
+    </div>
+
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="index.html"
+         class="inline-flex items-center justify-center px-7 py-2.5 rounded-full
+                bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                text-sm font-medium tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                transition-colors duration-200">
+        ← Back to Home
+      </a>
+    
+      <a href="week1_foto.html"
+         class="inline-flex items-center justify-center px-7 py-2.5 rounded-full
+                bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                text-sm font-medium tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                transition-colors duration-200">
+        Foto’s
+      </a>
+      <a href="week2.html"
+         class="inline-flex items-center justify-center px-7 py-2.5 rounded-full
+                bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                text-sm font-medium tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                transition-colors duration-200">
+        Week 2 →
+      </a>
+    </div>
+    
+  </main>
+
+  <footer class="w-full max-w-4xl px-6 pb-6 text-xs text-white/70 text-center mt-4">
+    © 2025 Valeriia Prokhonova — Bachelor Grafische en Digitale Media, AP Hogeschool Antwerpen
+  </footer>
+  <!-- Dynamic Gradient Script -->
+  <script>
+    const gradient = document.getElementById("gradientBG");
+
+    let lastX = 0;
+    let lastY = 0;
+    let lastTime = performance.now();
+    let velocity = 0; 
+    let smoothVelocity = 0;
+
+    window.addEventListener("mousemove", (e) => {
+      const now = performance.now();
+      const dt = now - lastTime;
+
+      if (dt === 0) return;
+
+      const dx = e.clientX - lastX;
+      const dy = e.clientY - lastY;
+
+      velocity = Math.sqrt(dx * dx + dy * dy) / dt * 100;
+      smoothVelocity = smoothVelocity * 0.85 + velocity * 0.15;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+      lastTime = now;
+
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      const hueShift = Math.min(smoothVelocity * 2, 120);
+
+      const hue1 = Math.floor(10 + x * 10 + hueShift * 0.2);
+      const hue2 = Math.floor(270 + y * 10 + + hueShift * 0.2);
+
+      const posShift = Math.min(smoothVelocity / 6, 10);
+
+      gradient.style.background = `
+        radial-gradient(
+          circle at calc(${x * 100}% + ${posShift}px) calc(${y * 100}% + ${posShift}px),
+          hsl(${hue1}, 95%, 55%),
+          hsl(${hue2}, 100%, 50%),
+          #000015
+        )
+      `;
+
+      gradient.style.transition = `background ${Math.max(80 - smoothVelocity, 10)}ms linear`;
+    });
+  </script>
+
+  <script>
+  const buttonsWrapper = document.querySelector(".grid");
+  const bodyElement = document.body;
+
+  window.addEventListener("mousemove", (e) => {
+    const rect = buttonsWrapper.getBoundingClientRect();
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Distance from mouse to button area center
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const dx = mouseX - centerX;
+    const dy = mouseY - centerY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Normalize distance: closer = 0, far = 1
+    const maxDist = Math.max(window.innerWidth, window.innerHeight);
+    let desaturation = distance / maxDist;
+    desaturation = Math.min(Math.max(desaturation, 0), 1);
+
+    // Apply grayscale filter
+    const grayscaleValue = desaturation * 100; // convert to % 0–100
+
+    bodyElement.style.filter = `grayscale(${grayscaleValue}%)`;
+    bodyElement.style.transition = "filter 0.2s ease-out";
+  });
+</script>
+
+</body>
+</html>

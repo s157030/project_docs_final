@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 10 – Formulieren</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="dist/output.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start text-white relative overflow-y-auto">
+ 
+<!-- Dynamic gradient background -->
+  <div id="gradientBG" class="absolute inset-0 -z-10 transition-all blur-3xl scale-125"></div>
+
+  <main class="w-full max-w-4xl px-6 py-10 lg:py-16 flex flex-col items-center text-center gap-8">
+    <div class="text-xs font-semibold tracking-[0.28em] uppercase text-white/70">
+      Valeriia Prokhonova ontwerpdocumentatie 1GDM2
+    </div>
+
+    <div class="w-full rounded-3xl bg-white/10 border border-white/30 shadow-2xl backdrop-blur-xl px-6 sm:px-8 py-8 sm:py-10 text-left">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-4">Week 13 – Afwerking van de website met ontwerpdocumentatie</h1>
+      <div class="space-y-7 text-sm md:text-base leading-relaxed text-white/85">
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Focus op afwerking en consistentie
+    </h2>
+    <p>
+      In deze laatste fase richtte ik mij volledig op de verdere afwerking van mijn
+      <strong>website voor ontwerpdocumentatie</strong>. Het doel was om alle inhoud
+      overzichtelijk samen te brengen en de website zowel inhoudelijk als visueel
+      consistent af te ronden.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Structuur en inhoud
+    </h2>
+    <p>
+      Ik voegde <strong>afbeeldingen</strong> toe aan de verschillende weekpagina’s en
+      optimaliseerde de bijbehorende <strong>bestandsstructuur</strong>, zodat alle assets
+      logisch georganiseerd en efficiënt geladen worden.
+    </p>
+    <p>
+      Daarnaast vulde ik de documentatie verder aan met de voortgang na de
+      <em class="italic">vakantie- en examenperiode</em>, zodat het volledige
+      ontwerpproces chronologisch en volledig gedocumenteerd is.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Navigatie en interactie
+    </h2>
+    <p>
+      Om de website gebruiksvriendelijker te maken, voegde ik
+      <strong>navigatieknoppen</strong> toe die doorverwijzen naar fotopagina’s,
+      evenals knoppen die linken naar <strong>GitHub</strong> en <strong>Figma</strong>.
+      Hierdoor kunnen zowel het eindresultaat als het ontwerpproces eenvoudig geraadpleegd worden.
+    </p>
+    <p>
+      Daarnaast maakte ik de afbeeldingen <strong>klikbaar</strong>, zodat ze
+      afzonderlijk en in detail bekeken kunnen worden.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Documentatie en export
+    </h2>
+    <p>
+      Op basis van de website stelde ik een <strong>PDF-versie van de volledige ontwerpdocumentatie</strong>
+      samen. Deze PDF vormt een statisch en overdraagbaar overzicht van het volledige project,
+      opgebouwd volgens dezelfde structuur als de website.
+    </p>
+    <p>
+      Daarnaast maakte ik een <strong>gecomprimeerde versie</strong> van dit PDF-bestand
+      en voegde ik deze toe aan de <strong>hoofdpagina</strong>, zodat de documentatie
+      eenvoudig te downloaden en te delen is.
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="font-semibold text-white/95 mt-6">
+      Vormgeving en technische afronding
+    </h2>
+    <p>
+      De vormgeving werd verder verfijnd door het toevoegen van een
+      <strong>dynamische gradient-achtergrond</strong>, die subtiel van kleur verandert
+      op basis van de beweging van de muis.
+    </p>
+    <p>
+      Tot slot verving ik de statische footer door een
+      <strong>werkende link</strong> naar de meest recente versie van de website op
+      <strong>GitHub</strong>, zodat altijd duidelijk is waar de actuele en definitieve
+      versie van het project te vinden is.
+    </p>
+  </div>
+
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="index.html"
+         class="inline-flex items-center justify-center px-7 py-2.5 rounded-full
+                bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                text-sm font-medium tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                transition-colors duration-200">
+        ← Back to Home
+      </a>
+     <a href="https://github.com/s157030/ontwerpdoc2.git"
+         class="inline-flex items-center justify-center px-7 py-2.5 rounded-full
+                bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                text-sm font-medium tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                transition-colors duration-200">
+        GitHub
+      </a>
+    </div>
+  </main>
+
+  <footer class="w-full max-w-4xl px-6 pb-6 text-xs text-white/70 text-center mt-4">
+    © 2025 Valeriia Prokhonova — Bachelor Grafische en Digitale Media, AP Hogeschool Antwerpen
+  </footer>
+
+  <!-- Dynamic Gradient Script -->
+  <script>
+    const gradient = document.getElementById("gradientBG");
+
+    let lastX = 0;
+    let lastY = 0;
+    let lastTime = performance.now();
+    let velocity = 0; 
+    let smoothVelocity = 0;
+
+    window.addEventListener("mousemove", (e) => {
+      const now = performance.now();
+      const dt = now - lastTime;
+
+      if (dt === 0) return;
+
+      const dx = e.clientX - lastX;
+      const dy = e.clientY - lastY;
+
+      velocity = Math.sqrt(dx * dx + dy * dy) / dt * 100;
+      smoothVelocity = smoothVelocity * 0.85 + velocity * 0.15;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+      lastTime = now;
+
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      const hueShift = Math.min(smoothVelocity * 2, 120);
+
+      const hue1 = Math.floor(10 + x * 10 + hueShift * 0.2);
+      const hue2 = Math.floor(270 + y * 10 + + hueShift * 0.2);
+
+      const posShift = Math.min(smoothVelocity / 6, 10);
+
+      gradient.style.background = `
+        radial-gradient(
+          circle at calc(${x * 100}% + ${posShift}px) calc(${y * 100}% + ${posShift}px),
+          hsl(${hue1}, 95%, 55%),
+          hsl(${hue2}, 100%, 50%),
+          #000015
+        )
+      `;
+
+      gradient.style.transition = `background ${Math.max(80 - smoothVelocity, 10)}ms linear`;
+    });
+  </script>
+
+  <script>
+  const buttonsWrapper = document.querySelector(".grid");
+  const bodyElement = document.body;
+
+  window.addEventListener("mousemove", (e) => {
+    const rect = buttonsWrapper.getBoundingClientRect();
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Distance from mouse to button area center
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const dx = mouseX - centerX;
+    const dy = mouseY - centerY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Normalize distance: closer = 0, far = 1
+    const maxDist = Math.max(window.innerWidth, window.innerHeight);
+    let desaturation = distance / maxDist;
+    desaturation = Math.min(Math.max(desaturation, 0), 1);
+
+    // Apply grayscale filter
+    const grayscaleValue = desaturation * 100; // convert to % 0–100
+
+    bodyElement.style.filter = `grayscale(${grayscaleValue}%)`;
+    bodyElement.style.transition = "filter 0.2s ease-out";
+  });
+</script>
+
+</body>
+</html>

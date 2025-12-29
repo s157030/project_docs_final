@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost in Tra(i)nslation – Ontwerpdocumentatie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="dist/output.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    #annotationModal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease-out;
+    }
+    #annotationModal:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center text-white relative overflow-hidden">
+
+  <!-- Dynamic gradient background -->
+  <div id="gradientBG" class="absolute inset-0 -z-10 transition-all blur-3xl scale-125"></div>
+
+  <!-- Main content -->
+  <main class="w-full max-w-6xl px-6 py-10 lg:py-16 flex flex-col items-center text-center gap-8">
+    <!-- Center column -->
+    <section class="flex-1 flex flex-col items-center text-center gap-8">
+      <div class="text-xs font-semibold tracking-[0.28em] uppercase text-white/70">
+        Valeriia Prokhonova ontwerpdocumentatie 1GDM2
+      </div>
+
+      <!-- Hero card -->
+      <div class="w-full max-w-3xl rounded-3xl bg-white/10 border border-white/30
+                  shadow-2xl backdrop-blur-xl px-8 py-10">
+        <h1 class="text-4xl md:text-5xl font-semibold mb-3">
+          Lost in Tra(i)nslation
+        </h1>
+        <p class="text-base md:text-lg text-white/85">
+          Mijn progress in een semester 
+        </p>
+      </div>
+
+      <!-- Home button -->
+      <div>
+        <a href="#annotationModal"
+           class="inline-flex items-center justify-center px-10 py-3 rounded-full
+                  bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+                  text-sm font-semibold tracking-wide hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Home
+        </a>
+      </div>
+<div class="flex flex-wrap justify-center gap-4">
+  <a href="/public/pdf/2526_PRTT_ProkhonovaV_1GDM2_Ontwerpdocumentatie.pdf"
+     target="_blank" rel="noopener"
+     class="inline-flex items-center justify-center px-8 py-3 rounded-full
+            bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+            text-sm font-semibold hover:bg-orange-400/90 hover:border-transparent
+            transition-colors duration-200">
+    View PDF
+  </a>
+
+  <a href="/public/pdf/2526_PRTT_ProkhonovaV_1GDM2_Ontwerpdocumentatie.pdf"
+     download="2526_PRTT_ProkhonovaV_1GDM2_Ontwerpdocumentatie.pdf"
+     class="inline-flex items-center justify-center px-8 py-3 rounded-full
+            bg-white/10 border border-white/40 backdrop-blur-md shadow-lg
+            text-sm font-semibold hover:bg-orange-400/90 hover:border-transparent
+            transition-colors duration-200">
+    Download PDF
+  </a>
+</div>
+      <!-- Week buttons -->
+      <div class="w-full max-w-xl grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
+        <a href="week1.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200"
+                  data-hue1="20"
+                  data-hue2="300">
+          Week 1
+        </a>
+        <a href="week2.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200"
+                  data-hue1="40"
+                  data-hue2="250">
+          Week 2
+        </a>
+        <a href="week3.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Week 3
+        </a>
+        <a href="week4.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Week 4
+        </a>
+        <a href="week5.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Week 5
+        </a>
+        <a href="week6.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Week 6
+        </a>
+        <a href="week7.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 7
+        </a>
+        <a href="week8.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 8
+        </a>
+        <a href="week9.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 9
+        </a>
+        <a href="week10.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 10
+        </a>
+        <a href="week11.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 11
+        </a>
+        <a href="week12.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 12
+        </a>
+        <a href="week13.html"
+           class="tilt-btn week-color inline-flex items-center justify-center px-6 py-3 rounded-full
+                  bg-white/10 border border-white/30 backdrop-blur-md shadow-lg
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200 col-span-2 sm:col-span-1">
+          Week 13
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Annotation modal -->
+  <div id="annotationModal"
+       class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md px-4">
+    <div class="max-w-xl w-full rounded-3xl bg-white/10 border border-white/30
+                shadow-2xl backdrop-blur-xl px-8 py-8 text-sm md:text-base text-white/90 space-y-4">
+      <h2 class="text-2xl font-semibold mb-2">Projectannotatie</h2>
+      <p>
+        Dit project maakt deel uit van het opleidingsonderdeel <strong>PPT1</strong>
+        binnen de opleiding <em>Bachelor Grafische en Digitale Media</em> aan de AP Hogeschool.
+      </p>
+      <p>
+        Het doel van het project is het creëren van een website die de voortgang per week van het leerproces weergeeft.
+        De structuur van de site bestaat uit een startpagina (Home) en dertien afzonderlijke weekpagina’s.
+      </p>
+      <div class="mt-4 flex justify-end">
+        <a href="#"
+           class="inline-flex items-center justify-center px-6 py-2 rounded-full
+                  bg-white/15 border border-white/40 backdrop-blur-md shadow-md
+                  text-sm font-medium hover:bg-orange-400/90 hover:border-transparent
+                  transition-colors duration-200">
+          Sluiten
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w-full max-w-6xl px-6 pb-6 text-xs text-white/70 text-center mt-4">
+    © 2025 Valeriia Prokhonova — Bachelor Grafische en Digitale Media, AP Hogeschool Antwerpen
+  </footer>
+<script>
+  let mouseGradientEnabled = true;
+</script>
+  <!-- Dynamic Gradient Script -->
+  <script>
+    const gradient = document.getElementById("gradientBG");
+
+    let lastX = 0;
+    let lastY = 0;
+    let lastTime = performance.now();
+    let velocity = 0; 
+    let smoothVelocity = 0;
+
+    window.addEventListener("mousemove", (e) => {
+      const now = performance.now();
+      const dt = now - lastTime;
+
+      if (dt === 0) return;
+
+      const dx = e.clientX - lastX;
+      const dy = e.clientY - lastY;
+
+      velocity = Math.sqrt(dx * dx + dy * dy) / dt * 100;
+      smoothVelocity = smoothVelocity * 0.85 + velocity * 0.15;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+      lastTime = now;
+
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      const hueShift = Math.min(smoothVelocity * 2, 120);
+
+      const hue1 = Math.floor(10 + x * 10 + hueShift * 0.2);
+      const hue2 = Math.floor(270 + y * 10 + hueShift * 0.2);
+
+      const posShift = Math.min(smoothVelocity / 6, 10);
+
+      gradient.style.background = `
+        radial-gradient(
+          circle at calc(${x * 100}% + ${posShift}px) calc(${y * 100}% + ${posShift}px),
+          hsl(${hue1}, 95%, 55%),
+          hsl(${hue2}, 100%, 50%),
+          #000015
+        )
+      `;
+
+      gradient.style.transition = `background ${Math.max(80 - smoothVelocity, 10)}ms linear`;
+    });
+  </script>
+
+  <script>
+  const buttonsWrapper = document.querySelector(".grid");
+  const bodyElement = document.body;
+
+  window.addEventListener("mousemove", (e) => {
+    if (!mouseGradientEnabled) return;
+    const rect = buttonsWrapper.getBoundingClientRect();
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Distance from mouse to button area center
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const dx = mouseX - centerX;
+    const dy = mouseY - centerY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Normalize distance: closer = 0, far = 1
+    const maxDist = Math.max(window.innerWidth, window.innerHeight);
+    let desaturation = distance / maxDist;
+    desaturation = Math.min(Math.max(desaturation, 0), 1);
+
+    // Apply grayscale filter
+    const grayscaleValue = desaturation * 100; // convert to % 0–100
+
+    bodyElement.style.filter = `grayscale(${grayscaleValue}%)`;
+    bodyElement.style.transition = "filter 0.2s ease-out";
+  });
+</script>
+<!-- 3D tilt effect for buttons -->
+  <script>
+    const tiltButtons = document.querySelectorAll(".tilt-btn");
+
+    tiltButtons.forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        btn.style.transform =
+          `rotateX(${(-y / 12)}deg) rotateY(${(x / 12)}deg) scale(1.05)`;
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+      });
+    });
+  </script>
+  
+  <script>
+  const gradientBG = document.getElementById("gradientBG");
+  const weekButtons = document.querySelectorAll(".week-color");
+
+
+  function disableMouseGradient() {
+    mouseGradientEnabled = false;
+  }
+
+  function enableMouseGradient() {
+    mouseGradientEnabled = true;
+  }
+
+  weekButtons.forEach(btn => {
+    btn.addEventListener("mouseenter", () => {
+      disableMouseGradient();
+
+      const hue1 = btn.dataset.hue1 || 30;
+      const hue2 = btn.dataset.hue2 || 240;
+
+      gradientBG.style.background = `
+        radial-gradient(
+          circle at 50% 50%,
+          hsl(${hue1}, 95%, 55%),
+          hsl(${hue2}, 100%, 50%),
+          #000015
+        )
+      `;
+      gradientBG.style.transition = "background 300ms ease-out";
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      enableMouseGradient();
+    });
+  });
+</script>
+
+</body>
+</html>
